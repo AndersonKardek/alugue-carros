@@ -13,4 +13,25 @@ export default createGlobalStyle`
     color: ${(props) => props.theme.colors.text};
     font-family: sans-serif;
   }
+
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  ul ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    text-decoration: none;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
 `;
