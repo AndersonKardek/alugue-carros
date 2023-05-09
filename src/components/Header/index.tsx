@@ -1,6 +1,7 @@
 import carLogo from "/car-logo.png";
 import ButtonModel from "../ButtonModel";
 import { Container, ListStyle } from "./styles";
+import {BiUser} from "react-icons/bi"
 
 const Header: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ const Header: React.FC = () => {
 
       <div>
         <ButtonModel name="Login" />
-        <ButtonModel name="Register" hasBackgroundColor={true}/>
+        <ButtonModel name="Register" hasBackgroundColor hasIcons={<BiUser />}/>
      
       </div>
     </Container>

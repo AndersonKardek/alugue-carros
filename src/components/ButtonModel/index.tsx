@@ -3,15 +3,17 @@ import { Button } from "./styles"
 interface IButtonProps {
   name: string;
   hasBackgroundColor?: boolean;
+  hasIcons?: React.ReactNode;
 }
 
 const ButtonModel: React.FC<IButtonProps> = ({
   name,
-  hasBackgroundColor
+  hasBackgroundColor,
+  hasIcons
 }) => {
   return (
     <Button bgColor={hasBackgroundColor}>
-      {name}
+      {name}{hasIcons}
       </Button>
 
     )
