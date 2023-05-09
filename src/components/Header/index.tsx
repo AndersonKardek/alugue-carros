@@ -1,5 +1,6 @@
 import carLogo from "/car-logo.png";
-import { Container, ListStyle, Button } from "./styles";
+import ButtonModel from "../ButtonModel";
+import { Container, ListStyle } from "./styles";
 
 const Header: React.FC = () => {
   return (
@@ -24,8 +25,9 @@ const Header: React.FC = () => {
       </ListStyle>
 
       <div>
-        <Button type="submit">Login</Button>
-        <Button type="submit">Register</Button>
+        <ButtonModel name="Login" />
+        <ButtonModel name="Register" hasBackgroundColor={true}/>
+     
       </div>
     </Container>
   );
