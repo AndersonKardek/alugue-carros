@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
-export const Container = styled.nav`
+export const Content = styled.nav`
   height: 100px;
-  background-color: ${(props) => props.theme.colors.background};
   font-weight: bold;
   font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  margin: 0 10rem;
+  position: relative;
+  z-index: 4;
 
   div {
     display: flex;
@@ -18,6 +17,14 @@ export const Container = styled.nav`
       width: 5rem;
       margin-right: 6px;
     }
+  }
+
+  .buttons {
+    gap: 16px;
+  }
+
+  @media (max-width: 1200px) {
+    display: none;
   }
 `;
 

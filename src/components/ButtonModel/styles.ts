@@ -1,31 +1,42 @@
 import styled from "styled-components";
 
 interface IProps {
-  bgColor?: boolean;
+  secundary?: boolean;
+  displayIcon?: boolean;
 }
 
-export const Button = styled.button<IProps> `
+export const Button = styled.button<IProps>`
   display: flex;
-  justify-content: center;
+  justify-content: ${({ displayIcon }) =>
+    displayIcon ? "space-between" : "center"};
   align-items: center;
-  padding: 18px 26px;
+  padding: 16px;
+  width: 11em;
+  height: 58px;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
-  cursor: pointer;
-  background-color: ${({bgColor}) => bgColor ? props=>props.theme.colors.primary : "transparent"};
-  color: ${({bgColor}) => bgColor ? "white" : props => props.theme.colors.text};
-  box-shadow: ${({bgColor}) => bgColor ? "0 2px 4px 0 rgba(0, 0, 0, 0.3)" : "0 0 0 0 rgba(0, 0, 0, 0)"};
+  background-color: ${({ secundary }) =>
+    secundary
+      ? (props) => props.theme.colors.secundary
+      : (props) => props.theme.colors.primary};
+  color: #ffff;
 
   transition: all 400ms ease-in-out;
 
   &:hover {
-    border-radius: 8px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
 
-    color: ${({bgColor}) => bgColor ? "white" : props => props.theme.colors.primary};
+    color: ${({ secundary }) =>
+      secundary
+        ? (props) => props.theme.colors.primary
+        : (props) => props.theme.colors.secundary};
   }
 
   & svg {
+    display: flex;
+    align-items: end;
     margin-left: 8px;
     font-size: 24px;
   }

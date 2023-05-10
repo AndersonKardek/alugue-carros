@@ -1,22 +1,23 @@
-import { Button } from "./styles"
+import { Button } from "./styles";
 
 interface IButtonProps {
   name: string;
-  hasBackgroundColor?: boolean;
-  hasIcons?: React.ReactNode;
+  bgSecundary?: boolean;
+  hasIcon?: boolean;
+  showIcon?: React.ReactNode;
 }
 
 const ButtonModel: React.FC<IButtonProps> = ({
   name,
-  hasBackgroundColor,
-  hasIcons
+  bgSecundary,
+  hasIcon,
+  showIcon,
 }) => {
   return (
-    <Button bgColor={hasBackgroundColor}>
-      {name}{hasIcons}
-      </Button>
-
-    )
-}
+    <Button displayIcon={hasIcon} secundary={bgSecundary}>
+      {name} {showIcon}
+    </Button>
+  );
+};
 
 export default ButtonModel;

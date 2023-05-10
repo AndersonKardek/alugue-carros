@@ -12,6 +12,8 @@ export default createGlobalStyle`
     font-size: 14px;
     color: ${(props) => props.theme.colors.text};
     font-family: sans-serif;
+
+    transition: all 400ms ease-in-out;
   }
 
   button {
