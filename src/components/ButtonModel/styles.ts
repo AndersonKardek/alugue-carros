@@ -11,8 +11,7 @@ export const Button = styled.button<IProps>`
     displayIcon ? "space-between" : "center"};
   align-items: center;
   padding: 16px;
-  width: 11em;
-  height: 58px;
+  width: 12em;
   border-radius: 4px;
   font-size: 1em;
   font-weight: bold;

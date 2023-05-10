@@ -47,4 +47,8 @@ export const ContentWrapper = styled.div`
     display: flex;
     gap: 16px;
   }
+
+  @media (max-width: 800px) {
+    text-align:center;
+  }
 `;
