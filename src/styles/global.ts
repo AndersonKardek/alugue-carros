@@ -7,11 +7,12 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
+  html, body {
     background-color: ${(props) => props.theme.colors.background};
     font-size: 14px;
     color: ${(props) => props.theme.colors.text};
     font-family: sans-serif;
+    scroll-behavior: smooth ;
 
     transition: all 400ms ease-in-out;
   }

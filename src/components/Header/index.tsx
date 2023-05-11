@@ -1,29 +1,38 @@
 import carLogo from "/car-logo.png";
-import ButtonModel from "../ButtonModel";
 import { Content, ListStyle } from "./styles";
+
+import ButtonModel from "../ButtonModel";
 import Container from "../Container";
+
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
     <Container>
       <Content>
-        <div>
+        <Link to="/" className="logoWrapper">
           <img src={carLogo} alt="car logo" />
           <h1>
             Alugue <br /> Carros
           </h1>
-        </div>
+        </Link>
 
         <ListStyle>
-          <li>
-            <a href="/">Sobre Nós</a>
-          </li>
-          <li>
-            <a href="/">Modelos dos Veículos</a>
-          </li>
-          <li>
-            <a href="/">Depoimentos</a>
-          </li>
+          <Link to="/about" className="link">
+            Sobre Nós
+          </Link>
+
+          <Link to="/car-models" className="link">
+            Modelos dos Carros
+          </Link>
+
+          <Link to="/testimonials" className="link">
+            Depoimentos
+          </Link>
+
+          <Link to="/contact" className="link">
+            Contato
+          </Link>
         </ListStyle>
 
         <div className="buttons">

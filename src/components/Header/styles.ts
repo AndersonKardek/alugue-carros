@@ -10,7 +10,7 @@ export const Content = styled.nav`
   position: relative;
   z-index: 4;
 
-  div {
+  .logoWrapper {
     display: flex;
     align-items: center;
     img {
@@ -20,6 +20,7 @@ export const Content = styled.nav`
   }
 
   .buttons {
+    display: flex;
     gap: 16px;
   }
 
@@ -32,21 +33,17 @@ export const ListStyle = styled.ul`
   display: flex;
   list-style: none;
 
-  li {
+  .link {
     text-decoration: none;
+    color: ${(props) => props.theme.colors.text};
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0px 10px;
 
-    a {
-      text-decoration: none;
-      color: ${(props) => props.theme.colors.text};
-      font-weight: bold;
-      font-size: 1rem;
-      margin: 0px 10px;
+    &:hover {
+      color: ${(props) => props.theme.colors.primary};
 
-      &:hover {
-        color: ${(props) => props.theme.colors.primary};
-
-        transition: all 0.4s ease-in-out;
-      }
+      transition: all 0.4s ease-in-out;
     }
   }
 `;
