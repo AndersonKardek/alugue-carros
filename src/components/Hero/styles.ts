@@ -10,7 +10,7 @@ export const ImgBgHero = styled.img`
 export const ImgCarHero = styled.img`
   width: 65%;
 
-  @media (max-width: 800px) {
+  @media (max-width: 980px) {
     display: none;
   }
 `;
@@ -45,10 +45,11 @@ export const ContentWrapper = styled.div`
   .buttons {
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
   }
 
   @media (max-width: 800px) {
-    text-align:center;
+    text-align: center;
   }
 `;

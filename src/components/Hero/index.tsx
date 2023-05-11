@@ -6,11 +6,10 @@ import { FiChevronRight } from "react-icons/fi";
 
 import { ImgBgHero, ImgCarHero, ContentWrapper } from "./styles";
 import ButtonModel from "../ButtonModel";
-import Container from "../Container";
 
 const Hero: React.FC = () => {
   return (
-    <Container>
+    <>
       <ImgBgHero src={bgHero} alt="bg-hero" />
 
       <ContentWrapper>
@@ -44,7 +43,7 @@ const Hero: React.FC = () => {
 
         <ImgCarHero src={carHero} alt="car-hero" />
       </ContentWrapper>
-    </Container>
+    </>
   );
 };
 

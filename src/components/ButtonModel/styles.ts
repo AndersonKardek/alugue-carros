@@ -39,4 +39,8 @@ export const Button = styled.button<IProps>`
     margin-left: 8px;
     font-size: 24px;
   }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
