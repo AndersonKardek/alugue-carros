@@ -1,7 +1,7 @@
 import ButtonModel from "../ButtonModel";
 import { useState } from "react";
 
-import { DropDownDiv, WrapperSection } from "./styles";
+import { DateDiv, DropDownDiv, WrapperSection } from "./styles";
 
 interface IValues {
   id: number;
@@ -12,6 +12,8 @@ const BookCar: React.FC = () => {
   const [selectedCar, setSelectedCar] = useState("");
   const [selectedPickUpCity, setSelectedPickUpCity] = useState("");
   const [selectedPickOfCity, setSelectedPickOfCity] = useState("");
+  const [selectedDatePickUp, setSelectedDatePickUp] = useState("");
+  const [selectedDateDropOf, setSelectedDateDropOf] = useState("");
 
   const cars: IValues[] = [
     { id: 1, name: "Audi A1 S-line" },
@@ -53,6 +55,16 @@ const BookCar: React.FC = () => {
     setSelectedPickOfCity(e.target.value);
   };
 
+  const handleDatePickUp = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+    setSelectedDatePickUp(e.target.value);
+  };
+
+  const handleDateDropOf = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+    setSelectedDateDropOf(e.target.value);
+  };
+
   return (
     <WrapperSection>
       <form action="submit" autoComplete="on">
@@ -64,7 +76,7 @@ const BookCar: React.FC = () => {
             value={selectedCar}
             onChange={handleCarsUpdate}
           >
-            <option value=""> Escolha um carro...</option>
+            <option value="">Escolha um carro... </option>
             {cars.map((car) => {
               return (
                 <option key={car.id} value={car.name}>
@@ -112,9 +124,31 @@ const BookCar: React.FC = () => {
             })}
           </select>
         </DropDownDiv>
-      </form>
 
-      <ButtonModel name="Pesquisar" />
+        <DateDiv>
+          <label htmlFor="datePickUp">Retirada</label>
+          <input
+            type="date"
+            name="datePickUp"
+            id="datePickUp"
+            value={selectedDatePickUp}
+            onChange={handleDatePickUp}
+          />
+        </DateDiv>
+
+        <DateDiv>
+          <label htmlFor="dateDropOf">Entrega</label>
+          <input
+            type="date"
+            name="dateDropOf"
+            id="dateDropOf"
+            value={selectedDateDropOf}
+            onChange={handleDateDropOf}
+          />
+        </DateDiv>
+
+        <ButtonModel name="Pesquisar" />
+      </form>
     </WrapperSection>
   );
 };
