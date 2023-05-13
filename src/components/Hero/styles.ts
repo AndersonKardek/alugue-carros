@@ -21,7 +21,7 @@ export const ContentWrapper = styled.div`
   position: relative;
   z-index: 2;
   /* margin-top: 10em; */
-  height: 70vh;
+  height: 75vh;
 
   h5 {
     font-size: 1.8em;

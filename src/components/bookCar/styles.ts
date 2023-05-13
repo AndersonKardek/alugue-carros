@@ -3,17 +3,30 @@ import styled from "styled-components";
 export const WrapperSection = styled.section`
   display: flex;
   justify-content: center;
-  margin-top: 10em;
+  align-items: center;
+  margin-top: 15em;
   margin-bottom: 30px;
 
   form {
+    width: 100vw;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 32px;
+
+    h2 {
+      margin-bottom: 1.5em;
+      font-size: 1.7em;
+    }
+  }
+
+  .formContent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    width: 100vw;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    padding: 32px;
+
+    .btn {
+      margin-top: 21px;
+    }
 
     @media (max-width: 1000px) {
       display: grid;
@@ -53,7 +66,7 @@ export const DateDiv = styled.div`
     margin-bottom: 6px;
   }
 
-  .input {
+  input {
     padding: 12px;
   }
 `;

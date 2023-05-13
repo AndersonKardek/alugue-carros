@@ -1,7 +1,11 @@
 import ButtonModel from "../ButtonModel";
 import { useState } from "react";
 
+import { MdLocationOn } from "react-icons/md";
+import { BsFillCarFrontFill, BsFillCalendar2CheckFill } from "react-icons/bs";
+
 import { DateDiv, DropDownDiv, WrapperSection } from "./styles";
+import LabelModel from "../LabelModel";
 
 interface IValues {
   id: number;
@@ -51,103 +55,125 @@ const BookCar: React.FC = () => {
   };
 
   const handlePickOfCity = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log(e.target.value);
     setSelectedPickOfCity(e.target.value);
   };
 
   const handleDatePickUp = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
     setSelectedDatePickUp(e.target.value);
   };
 
   const handleDateDropOf = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
     setSelectedDateDropOf(e.target.value);
   };
 
   return (
     <WrapperSection>
-      <form action="submit" autoComplete="on">
-        <DropDownDiv>
-          <label htmlFor="cars">Selecione o carro</label>
-          <select
-            name="cars"
-            id="cars"
-            value={selectedCar}
-            onChange={handleCarsUpdate}
-          >
-            <option value="">Escolha um carro... </option>
-            {cars.map((car) => {
-              return (
-                <option key={car.id} value={car.name}>
-                  {car.name}
-                </option>
-              );
-            })}
-          </select>
-        </DropDownDiv>
+      <form action="submit" autoComplete="on" id="bookCar">
+        <h2>Alugue seu carro</h2>
+        <div className="formContent">
+          <DropDownDiv>
+            <LabelModel
+              htmlFor="cars"
+              text="Selecione um carro"
+              showIcon={<BsFillCarFrontFill />}
+            />
+            <select
+              name="cars"
+              id="cars"
+              value={selectedCar}
+              onChange={handleCarsUpdate}
+            >
+              <option value="">Escolha um carro... </option>
+              {cars.map((car) => {
+                return (
+                  <option key={car.id} value={car.name}>
+                    {car.name}
+                  </option>
+                );
+              })}
+            </select>
+          </DropDownDiv>
 
-        <DropDownDiv>
-          <label htmlFor="upCity">Retirada</label>
-          <select
-            name="upCity"
-            id="upCity"
-            value={selectedPickUpCity}
-            onChange={handlePickUpCity}
-          >
-            <option value=""> Selecione a localização da retirada</option>
-            {PickUpCity.map((city) => {
-              return (
-                <option key={city.id} value={city.id}>
-                  {city.name}
-                </option>
-              );
-            })}
-          </select>
-        </DropDownDiv>
+          <DropDownDiv>
+            <LabelModel
+              htmlFor="upCity"
+              text="Retirada"
+              showIcon={<MdLocationOn />}
+            />
+            <select
+              name="upCity"
+              id="upCity"
+              value={selectedPickUpCity}
+              onChange={handlePickUpCity}
+            >
+              <option value=""> Selecione a localização da retirada</option>
+              {PickUpCity.map((city) => {
+                return (
+                  <option key={city.id} value={city.id}>
+                    {city.name}
+                  </option>
+                );
+              })}
+            </select>
+          </DropDownDiv>
 
-        <DropDownDiv>
-          <label htmlFor="ofCity">Entrega</label>
-          <select
-            name="ofCity"
-            id="ofCity"
-            value={selectedPickOfCity}
-            onChange={handlePickOfCity}
-          >
-            <option value=""> Selecione a localização da entrega</option>
-            {DropOfCity.map((city) => {
-              return (
-                <option key={city.id} value={city.id}>
-                  {city.name}
-                </option>
-              );
-            })}
-          </select>
-        </DropDownDiv>
+          <DropDownDiv>
+            <LabelModel
+              htmlFor="ofCity"
+              text="Entrega"
+              showIcon={<MdLocationOn />}
+            />
+            <select
+              name="ofCity"
+              id="ofCity"
+              value={selectedPickOfCity}
+              onChange={handlePickOfCity}
+            >
+              <option value=""> Selecione a localização da entrega</option>
+              {DropOfCity.map((city) => {
+                return (
+                  <option key={city.id} value={city.id}>
+                    {city.name}
+                  </option>
+                );
+              })}
+            </select>
+          </DropDownDiv>
 
-        <DateDiv>
-          <label htmlFor="datePickUp">Retirada</label>
-          <input
-            type="date"
-            name="datePickUp"
-            id="datePickUp"
-            value={selectedDatePickUp}
-            onChange={handleDatePickUp}
-          />
-        </DateDiv>
+          <DateDiv>
+            <LabelModel
+              htmlFor="datePickUp"
+              text="Data Retirada"
+              showIcon={<BsFillCalendar2CheckFill />}
+            />
+            <input
+              type="date"
+              name="datePickUp"
+              id="datePickUp"
+              value={selectedDatePickUp}
+              onChange={handleDatePickUp}
+            />
+          </DateDiv>
 
-        <DateDiv>
-          <label htmlFor="dateDropOf">Entrega</label>
-          <input
-            type="date"
-            name="dateDropOf"
-            id="dateDropOf"
-            value={selectedDateDropOf}
-            onChange={handleDateDropOf}
-          />
-        </DateDiv>
+          <DateDiv>
+            <LabelModel
+              htmlFor="dateDropOf"
+              text="Data Entrega"
+              showIcon={<BsFillCalendar2CheckFill />}
+            />
+            <input
+              type="date"
+              name="dateDropOf"
+              id="dateDropOf"
+              value={selectedDateDropOf}
+              onChange={handleDateDropOf}
+            />
+          </DateDiv>
 
-        <ButtonModel name="Pesquisar" />
+          <div className="btn">
+            <ButtonModel name="Pesquisar" />
+          </div>
+        </div>
       </form>
     </WrapperSection>
   );
