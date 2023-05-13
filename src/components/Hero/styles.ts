@@ -48,8 +48,41 @@ export const ContentWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-  }
 
+    .link {
+      display: flex;
+      justify-content: "space-between";
+      align-items: center;
+      padding: 16px;
+      width: 12em;
+      border-radius: 4px;
+      font-size: 1em;
+      font-weight: bold;
+      background-color: ${(props) => props.theme.colors.primary};
+      color: #ffff;
+
+      transition: all 400ms ease-in-out;
+
+      &:hover {
+        border-radius: 16px;
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+
+        color: ${(props) => props.theme.colors.secundary};
+      }
+
+      & svg {
+        display: flex;
+        text-align: end;
+        margin-left: 8px;
+        font-size: 24px;
+      }
+
+      @media (max-width: 500px) {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
   @media (max-width: 800px) {
     text-align: center;
   }
