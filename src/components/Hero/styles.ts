@@ -8,7 +8,7 @@ export const ImgBgHero = styled.img`
 `;
 
 export const ImgCarHero = styled.img`
-  width: 65%;
+  width: 100%;
 
   @media (max-width: 980px) {
     display: none;
@@ -20,7 +20,8 @@ export const ContentWrapper = styled.div`
   align-items: center;
   position: relative;
   z-index: 2;
-  margin-top: 10em;
+  /* margin-top: 10em; */
+  height: 70vh;
 
   h5 {
     font-size: 1.8em;

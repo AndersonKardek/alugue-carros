@@ -13,6 +13,7 @@ export const Content = styled.nav`
   .logoWrapper {
     display: flex;
     align-items: center;
+    color: ${(props) => props.theme.colors.text};
     img {
       width: 5rem;
       margin-right: 6px;

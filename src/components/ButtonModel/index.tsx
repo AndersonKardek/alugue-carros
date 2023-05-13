@@ -14,7 +14,7 @@ const ButtonModel: React.FC<IButtonProps> = ({
   showIcon,
 }) => {
   return (
-    <Button displayIcon={hasIcon} secundary={bgSecundary}>
+    <Button displayIcon={hasIcon} secundary={bgSecundary} type="submit">
       {name} {showIcon}
     </Button>
   );
