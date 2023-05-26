@@ -1,8 +1,12 @@
+import { TitleHeader, TitleStyled } from "./styles";
+
 const PlanYourTrip = () => {
   return (
     <section>
-      <h2>Planeje sua viagem agora</h2>
-      <h2>Rápido e Fácil aluguel de carro</h2>
+      <TitleHeader>
+        <h3>Planeje sua viagem agora</h3>
+        <TitleStyled>Rápido e Fácil aluguel de carro</TitleStyled>
+      </TitleHeader>
     </section>
   );
 };
