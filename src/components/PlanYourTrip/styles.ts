@@ -12,7 +12,7 @@ export const TitleHeader = styled.div`
   align-items: center;
 
   h3 {
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
     font-size: 1.8rem;
     font-weight: 400;
   }

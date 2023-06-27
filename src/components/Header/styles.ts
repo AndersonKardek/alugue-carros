@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Content = styled.nav`
-  height: 100px;
+  height: 10rem;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,13 +16,13 @@ export const Content = styled.nav`
     color: ${(props) => props.theme.colors.text};
     img {
       width: 5rem;
-      margin-right: 6px;
+      margin-right: 0.6rem;
     }
   }
 
   .buttons {
     display: flex;
-    gap: 16px;
+    gap: 1.6rem;
 
     @media (max-width: 1200px) {
       display: none;
@@ -55,15 +55,15 @@ export const Content = styled.nav`
   }
 
   .linkMobile {
-    margin-top: 13px;
-    font-size: 1.5em;
+    margin-top: 1.3rem;
+    font-size: 1.6rem;
     font-weight: bold;
     text-decoration: none;
     color: ${(props) => props.theme.colors.text};
   }
 
   & svg {
-    font-size: 1.7em;
+    font-size: 1.7rem;
     z-index: 5;
     cursor: pointer;
 
@@ -81,7 +81,7 @@ export const ListStyle = styled.ul`
     text-decoration: none;
     color: ${(props) => props.theme.colors.text};
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.6rem;
     margin: 0px 10px;
 
     &:hover {

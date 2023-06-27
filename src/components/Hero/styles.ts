@@ -24,14 +24,14 @@ export const ContentWrapper = styled.div`
   height: 75vh;
 
   h5 {
-    font-size: 1.8em;
+    font-size: 2rem;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
 
   h4 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 3.7rem;
+    margin-bottom: 2rem;
 
     strong {
       color: ${(props) => props.theme.colors.primary};
@@ -39,24 +39,24 @@ export const ContentWrapper = styled.div`
   }
 
   span {
-    font-size: 1.2em;
+    font-size: 1.4rem;
     font-weight: 600;
   }
 
   .buttons {
-    margin-top: 20px;
+    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 1.6rem;
 
     .link {
       display: flex;
       justify-content: "space-between";
       align-items: center;
-      padding: 16px;
-      width: 12em;
-      border-radius: 4px;
-      font-size: 1em;
+      padding: 1.6rem;
+      width: 17rem;
+      border-radius: 0.4rem;
+      font-size: 1.6rem;
       font-weight: bold;
       background-color: ${(props) => props.theme.colors.primary};
       color: #ffff;
@@ -64,7 +64,7 @@ export const ContentWrapper = styled.div`
       transition: all 400ms ease-in-out;
 
       &:hover {
-        border-radius: 16px;
+        border-radius: 1.6rem;
         box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
 
         color: ${(props) => props.theme.colors.secundary};
@@ -73,8 +73,8 @@ export const ContentWrapper = styled.div`
       & svg {
         display: flex;
         text-align: end;
-        margin-left: 8px;
-        font-size: 24px;
+        margin-left: 0.8rem;
+        font-size: 2.4rem;
       }
 
       @media (max-width: 500px) {

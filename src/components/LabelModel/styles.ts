@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const LabelStyles = styled.label<React.FC>`
   display: flex;
   align-items: center;
-  font-size: 1em;
+  font-size: 1.6rem;
 
   span {
-    margin-left: 4px;
-    font-size: 18px;
+    margin-left: 0.4rem;
+    font-size: 1.8rem;
     color: ${(props) => props.theme.colors.primary};
   }
   & svg {
-    margin-right: 8px;
-    font-size: 20px;
+    margin-right: 0.8rem;
+    font-size: 2rem;
     color: ${(props) => props.theme.colors.primary};
   }
 `;

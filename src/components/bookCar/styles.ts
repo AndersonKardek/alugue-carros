@@ -4,28 +4,28 @@ export const WrapperSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15em;
-  margin-bottom: 30px;
+  margin-top: 20rem;
+  margin-bottom: 3rem;
 
   form {
     width: 100vw;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 32px;
+    border-radius: 1rem;
+    padding: 3.2rem;
 
     h2 {
-      margin-bottom: 1.5em;
-      font-size: 1.7em;
+      margin-bottom: 1.5rem;
+      font-size: 1.7rem;
     }
   }
 
   .formContent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    gap: 3.2rem;
 
     .btn {
-      margin-top: 21px;
+      margin-top: 2.1rem;
     }
 
     @media (max-width: 1000px) {
@@ -47,12 +47,12 @@ export const DropDownDiv = styled.div`
   flex-direction: column;
 
   label {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
   }
   select {
-    padding: 12px;
+    padding: 1.2rem;
   }
 `;
 
@@ -61,12 +61,12 @@ export const DateDiv = styled.div`
   flex-direction: column;
 
   label {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
   }
 
   input {
-    padding: 12px;
+    padding: 1.2rem;
   }
 `;

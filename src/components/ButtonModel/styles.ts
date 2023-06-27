@@ -10,10 +10,10 @@ export const Button = styled.button<IProps>`
   justify-content: ${({ displayIcon }) =>
     displayIcon ? "space-between" : "center"};
   align-items: center;
-  padding: 16px;
-  width: 12em;
-  border-radius: 4px;
-  font-size: 1em;
+  padding: 1.6rem;
+  width: 16rem;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
   background-color: ${({ secundary }) =>
     secundary
@@ -24,7 +24,7 @@ export const Button = styled.button<IProps>`
   transition: all 400ms ease-in-out;
 
   &:hover {
-    border-radius: 16px;
+    border-radius: 1.6rem;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
 
     color: ${({ secundary }) =>
@@ -36,8 +36,8 @@ export const Button = styled.button<IProps>`
   & svg {
     display: flex;
     align-items: end;
-    margin-left: 8px;
-    font-size: 24px;
+    margin-left: 0.8rem;
+    font-size: 2.4rem;
   }
 
   @media (max-width: 500px) {
