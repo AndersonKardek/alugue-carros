@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const TitleStyled = styled.h2`
-  font-weight: bold;
-  font-size: 2.5rem;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
 `;
 
 export const TitleHeader = styled.div`
@@ -10,6 +11,7 @@ export const TitleHeader = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 8rem 0;
 
   h3 {
     margin-bottom: 1.6rem;
