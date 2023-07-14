@@ -8,7 +8,8 @@ export default {
   colors: {
     primary: "#ff4d30",
     secundary: "#010103",
-    test: "#ffff",
+    bgGray: "#E9E9E9",
+    white: "#ffff",
 
     background: "#f9f9f9",
     text: "#333",

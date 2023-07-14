@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const TitleStyled = styled.h2`
-  font-weight: 700;
-  font-size: 3rem;
+  font-weight: bold;
+  font-size: 4rem;
   text-align: center;
 `;
 
